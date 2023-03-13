@@ -1,0 +1,182 @@
+:root{
+    --light-red:hsla(0, 100%, 67%,0.2);
+    --dark-red:hsla(0, 100%, 67%,1);
+    --orangey-yellow:hsla(39, 100%, 56%,0.2);
+    --dark-orangey-yellow:hsl(39, 100%, 56%);
+    --green-red:hsla(166, 100%, 37%,0.2);
+    --dark-green-red:hsl(166,100%,37%);
+    --cobalt-blue:hsla(234, 85%, 45%,0.2);
+    --dark-cobalt-blue:hsl(234, 85%, 45%);
+
+    --light-slate-blue:hsl(252, 100%, 67%);
+    --light-royal-blue:hsl(241, 81%, 54%);
+    --violet-blue:hsla(256, 72%, 46%, 1);
+    --persian-blue:hsla(241, 72%, 46%, 0);
+
+    --white:hsl(0, 0%, 100%);
+    --pale-blue:hsl(221, 100%, 96%);
+    --light-lavender:hsl(241, 100%, 89%);
+    --dark-gray-blue:hsl(224, 30%, 27%);
+
+}
+
+@font-face {
+    font-family: "hankengrotesk";
+    src: url('./assets//fonts//HankenGrotesk-VariableFont_wght.ttf');
+}
+*{
+    font-family: "hankengrotesk";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 2rem;
+}
+main{
+    display: flex;
+    width: 50%;
+
+   
+    box-shadow: var(--light-lavender) 0px 5px 15px;
+    border-radius: 20px;
+    
+}
+.status{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.status_desc{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 65%;
+    text-align: center;
+}
+.left{
+    color: white;
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+    padding: 2rem;
+    background: linear-gradient(var(--light-slate-blue),var(--light-royal-blue));
+    border-radius: 20px;
+}
+.left h3{
+    margin-bottom: 1rem;
+    color: var(--light-lavender);
+}
+.circle{
+    background: linear-gradient(var(--violet-blue),var(--cobalt-blue));
+    border-radius: 50%;
+    width: 150px;
+    height:150px ;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#points{
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+#totalpoints{
+    font-weight: 700;
+    color: var(--light-slate-blue);
+}
+.right{
+    background-color: var(--white);
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1rem;
+    align-items: center;  
+    border-radius: 20px;
+    padding: 1rem;
+}
+.spoints{
+    font-weight:800;
+}
+
+.card{
+    padding: 1rem;
+    font-weight: 300;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+.desc{
+    display: flex;
+    gap: 1rem;
+    font-weight: 800;
+}
+.points{
+    display: flex;
+    gap: 0.5rem;
+    color: black;
+}
+#card1{
+    background-color: var(--light-red);
+    color: var(--dark-red);
+}
+#card2{
+    background-color: var(--orangey-yellow);
+    color: var(--dark-orangey-yellow);
+}
+#card3{
+    background-color: var(--green-red);
+    color: var(--dark-green-red);
+}
+#card4{
+    background-color: var(--cobalt-blue);
+    color: var(--dark-cobalt-blue);
+}
+button{
+    width: 90%;
+    border-radius: 30px;
+    border: 0;
+    padding: 1rem;
+    background-color: var(--dark-gray-blue);
+    color: white;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    
+}
+.right h2{
+   align-self: flex-start;
+   margin-left: 30px;
+}
+
+@media screen and  (max-width:1100px) {
+    main{
+        width:375px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    card{
+        width: 90%;
+    }
+    .left{
+        width: 100%;
+        height: max-content;
+    }
+    .right{
+        width: 100%;
+    }
+}
+button:hover{
+    background: linear-gradient(var(--light-slate-blue),var(--light-royal-blue));
+}
